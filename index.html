@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dangerously Yours — Vintage Script</title>
+  <style>
+    :root{
+      --paper:#f6f1e7;
+      --ink:#2b2b2b;
+      --muted:#6b6b6b;
+      --accent:#7a2e2e;
+      --shadow:rgba(0,0,0,.15);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      background:
+        radial-gradient(1200px 800px at 10% 10%, rgba(255,255,255,.35), transparent 40%),
+        radial-gradient(1000px 700px at 90% 90%, rgba(0,0,0,.08), transparent 45%),
+        linear-gradient(180deg, #c9b79c, #9e8f78);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family: "Cormorant Garamond", "Garamond", "Baskerville", serif;
+      color:var(--ink);
+      padding:24px;
+    }
+
+    .book{
+      width:min(920px, 100%);
+      background:
+        linear-gradient(0deg, rgba(0,0,0,.03), rgba(255,255,255,.02)),
+        repeating-linear-gradient(0deg, rgba(0,0,0,.015) 0, rgba(0,0,0,.015) 1px, transparent 1px, transparent 3px),
+        var(--paper);
+      border-radius:14px;
+      box-shadow:
+        0 30px 60px var(--shadow),
+        inset 0 0 0 1px rgba(0,0,0,.05);
+      padding:64px 64px 72px;
+      position:relative;
+    }
+
+    .book::before{
+      content:"";
+      position:absolute;
+      inset:12px;
+      border-radius:10px;
+      pointer-events:none;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.04);
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:36px;
+    }
+
+    h1{
+      font-size:clamp(28px, 4vw, 44px);
+      letter-spacing:.08em;
+      margin:0 0 8px;
+      text-transform:uppercase;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-style:italic;
+      letter-spacing:.04em;
+    }
+
+    .ornament{
+      width:120px;
+      height:2px;
+      background:linear-gradient(90deg, transparent, var(--accent), transparent);
+      margin:18px auto 0;
+    }
+
+    .script{
+      margin-top:40px;
+      column-gap:48px;
+    }
+
+    @media (min-width: 860px){
+      .script{ columns:2; }
+    }
+
+    .line{
+      break-inside:avoid;
+      margin:0 0 14px;
+      line-height:1.6;
+      font-size:18px;
+    }
+
+    .speaker{
+      font-variant:small-caps;
+      letter-spacing:.06em;
+      font-weight:600;
+      color:#3b3b3b;
+      display:block;
+      margin-bottom:2px;
+    }
+
+    .stage{
+      color:var(--muted);
+      font-style:italic;
+    }
+
+    footer{
+      margin-top:48px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .page-number{
+      border:1px solid rgba(0,0,0,.08);
+      padding:6px 10px;
+      border-radius:999px;
+    }
+
+    /* Subtle paper grain */
+    .grain{
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.035"/></svg>');
+      mix-blend-mode:multiply;
+      border-radius:14px;
+    }
+  </style>
+</head>
+<body>
+  <article class="book">
+    <div class="grain"></div>
+    <header>
+      <h1>Dangerously Yours</h1>
+      <div class="subtitle">A Vintage Romance Script</div>
+      <div class="ornament"></div>
+    </header>
+
+    <section class="script">
+      <p class="line"><span class="speaker">Rudolph</span>I'm going to tell you something tonight Catherine, something that will put my life in your hands</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Life?</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>It would mean my life, would the news to get certain circles</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Yes…</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>I love you, and I believe you love me!</p>
+
+      <p class="line"><span class="speaker">Catherine</span>You’re quite wrong, this has been only an adventure to me!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>That isn’t true Catherine</p>
+
+      <p class="line"><span class="speaker">Catherine</span>It is true! You smiled at me, I was flattered! It was an adventure for a holiday movie</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>You may as well take my heart,Catherine. It is already full of you! You walked into it the day we met!</p>
+
+      <p class="line"><span class="speaker">Catherine</span>You’re a fool, Rudolph</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Oh ho, but isn’t any man who falls in love… Do you know what you are to me? You are something to believe in again. You’re the type of person that had ceased to exist for me! A fine and honest woman!</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Oh my darling, you are such a child. Take your foolish little dream, and your heart, and go! Please go!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>What is it, what’s wrong my dear?</p>
+
+      <p class="line"><span class="speaker">Catherine</span>You know nothing about me, you’ve known me only 3 weeks!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>3 weeks?...Catherine I’ve known you all my life!</p>
+
+      <p class="line"><span class="speaker">Catherine</span>All your life?</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>It’s true! I’ve seen you in a thousand plays! Read you in as many books! Well, I’ve heard beautiful music and I thought, ‘she’d like that’! I’ve looked at flowers and known that one day, I’d give them to you!</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Oh stop, stop that! You must listen to me! I am not that woman! Perhaps I was once, but I am not now! You see, you were wrong! You can’t trust me</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Are you trying to tell me that someone who’s name we both know and not mention, sent you?</p>
+
+      <p class="line"><span class="speaker">Catherine</span>What are you saying?</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>You see, I’ve known all along. I had Arbear look you up the day you arrived.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>And it- it didn’t make any difference?</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>It didn’t make any difference. You see, I trust you. You came here to betray me…and to betray my country. That is your mission, Countess Rishula, and yet I am so sure of your love that I will trust you with my life and… what is far more valuable than the life of my own, the life of my country.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>I will betray you.</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>If you do, you will betray yourself at the same time.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Yes, yes I know.</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>So? You shall know my secret…Even now, as we sit here, there is a great network growing tighter around the foremost nations of the world. Treaties, pacts, alliances being formed against the man who sent you. Tonight, I will sign a pact that will set the wheels in motion to destroy him</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Destroy him?! No!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>He’s made a great many mistakes! The greatest of all was sending you here, Catherine</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Why?!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>He knew I should love you, but he did not guess that you…would fall in love with me.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>No…He didn’t guess that</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>And you do see that you cannot betray him</p>
+
+      <p class="line"><span class="speaker">Catherine</span>If I betray you, I betray myself…If I betray him, I betray my country. My country is very dear to me.</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Dearer than I?</p>
+
+      <p class="line"><span class="speaker">Catherine</span>No, not dearer than you.</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Then, will you help me defeat him?</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Help you, defeat him?</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>By telling me his plans, that’s the only way I could hope to defeat him! We can’t both win. You’ll see, Catherine.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>I’m… beginning to see…</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Then, you will help me.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>By giving you any information I may possess, concerning our plans?</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Yes.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>(sigh)You’re very clever, aren’t you? Oh, I can read you like a book now! You thought I was young and easily swayed! That you could make me love you, and that I would throw over my country, my duty for you?</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>That is not the way to look at it, Catherine.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>You weren’t so wise after all! Because you’ve lost, you hear me?! Lost! You guessed wrong in our little duel of wits! You forgot how close hate is to love!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>You don’t know what you’re saying, Catherine</p>
+
+      <p class="line"><span class="speaker">Catherine</span>You never loved me! You knew that I loved you, and you used that!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Catherine, stop talking like a child! We're playing for countries now!</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Yes we are! Aren’t we?...This is a gun in my hand Rudolph, I’d advise you to be careful of what you say.</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Well, rather melodramatic, aren’t you? Tell me, will I be the seventh notch on the gun or the eighth? (laugh) Do you mind if I smoke?</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Smoke?</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>I always smoke at the theater. Somehow, it enhances the performance.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>You can do anything you please, Rudolph. But you have very little time to do it in.</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>You mean you’re actually going to kill me?</p>
+
+      <p class="line"><span class="speaker">Catherine</span>I mean just that.</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Well, go ahead. I’ll do this my own way.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Look,you already know my purpose in being here. Now you will either give me my information or I will kill you. You have till nine o clock</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>You won’t do it. You can’t pull the trigger. You can’t pull it because you love me. It takes a very brave and a very cold woman to do that, Catherine. I don’t think you can, isn't that true? Isn’t that why you're waiting?</p>
+
+      <p class="line"><span class="speaker">Catherine</span>That’s not true!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Or is that you want to watch your victim? You want my heart constricted with agony, my hands to shake, you want me to plead for my life. So you can make a generous gesture and spare me! Sorry, Catherine, I don’t seem to be in the mood for prayers tonight.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>You don’t think I’ll do it? That's why you're so brave. You don't think I’ll do it. You wouldn’t be so brave otherwise! You’re a coward at heart! You lied to me, you deceived me!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>You tried to deceive me.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>I’m tired of listening to you!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>You gave me your heart, you know. You’d like me to hand it back to
+you, whole again. But I won’t. You’ll live a long time yet,
+Catherine. An eternity without me, you will look into the faces of
+passersby hoping for something that will for an instant, bring me
+back to you. You will find moonlit nights strangely empty because
+when you call my name through them there will be no answer. Always
+your heart will be aching for me, and your mind will give you the
+doubtful consolation that you did, a brave thing.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>You dare to talk of bravery?!</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>What else do we have to talk about, Catherine? For me, there will
+never be another woman but you. But for my heart, there is another
+love that must come before you…my country. You're so still, your face
+is like ice. What are you thinking, Catherine?</p>
+
+      <p class="line"><span class="speaker">Catherine</span>What does anything you can say, matter? You’ve betrayed me in
+words,what good are words, when your heart is breaking? If I fail
+now, I should deserve to die. You tricked me into loving you
+Aren’t you forgetting that you came here for the same purpose?</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>I couldn’t betray you, I tried to tell you that, but you said you
+already knew. I was as honest as I knew how to be
+You think I wanted to love you? Knowing where you came from and what
+your mission was? Don’t you suppose that very hour we were together I
+was thinking, ‘she’s just pretending.’</p>
+       
+      <p class="line"><span class="speaker">Catherine</span>I wasn’t! I loved you</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>And I loved you so much I let you pretend</p>
+
+      <p class="line"><span class="speaker">Catherine</span>Your time is up</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>Then my last words…I love you Catherine.</p>
+
+      <p class="line"><span class="speaker">Catherine</span>You’re determined to die with a lie on your lips?!</p>
+
+      <p class="line stage">(gun shoots)</p>
+
+      <p class="line"><span class="speaker">Rudolph</span>I…love you, Catherine.
+Catherine
+Oh god.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
